@@ -67,15 +67,15 @@ int main(void)
 	int val1, val2;
 	int result = 0;
 	std::cout<<"두 개의 숫자입력: ";
-	std::cin>>val1>>val2;	// 첫 번째 입력되는 정수가 val1에 저장되고 두 번째 입력되는 정수가 val2에 저장된다. 
-						    // 첫 번쨰 정수와 두 번째 정수의 경계는 공백에 의해 나눠진다. 
-	
+	std::cin>>val1>>val2;	// 첫 번째 입력되는 정수가 val1에 저장되고 두 번째 입력되는 정수가 val2에 저장된다. 첫 번 정수와 두 번째 정수의 경계는 공백에 의해 나눠진다. 
+	 
+						    
 	if(val1<val2)
 	{
-		for(int i=val1+1; i<val2; i++)	// C++에서는 for문 안에서 선언과 동시에 초기화를 진행한다.  
-		result+=i;						// 여기서 i는 for문 안에서만 사용가능한 지역변수. 
+		for(int i=val1+1; i<val2; i++)	// C++에서는 for문 안에서 선언과 동시에 초기화를 진행한다. 여기서 i는 for문 안에서만 사용가능한 지역변수
+		result+=i;						 
 	}		
-	
+	 
 	else
 	{
 		for(int i=val2+i; i<val1; i++)
