@@ -5,8 +5,6 @@
 
 
 
-
-
 #ifdef START1
 /*
 1.C++의 함수는 '디폴트 값'이라는 것을 설정할 수 있는데, '디폴트 값'이란 기본적으로 설정되어 있는 값. 
@@ -138,7 +136,7 @@ int BoxVolume(int length, int width, int height)
 //p32 Question 1-3 
 
 //문제1.예제 DefaultValue3.cpp에 정의된 함수 BoxVolume를 '매개변수의 디폴트 값 지정' 형태가 아닌, '함수 오버로딩'의 형태로 재 구현해보자. 물론 main 함수는 변경하지 않아야
-//		하며, 실행 결과도 동일해야 한다.
+//하며, 실행 결과도 동일해야 한다.
 
 
 int BoxVolume(int a, int b, int c)
