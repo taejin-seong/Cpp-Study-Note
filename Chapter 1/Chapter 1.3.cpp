@@ -36,10 +36,6 @@ int main(void)
 
 
 
-
-
-
-
 /*
 1. '디폴트 값은' 함수의 원형 선언에만 위치한다. 
 */
@@ -72,13 +68,6 @@ int Adder(int num1, int num2)
 
 
 
-
-
-
-
-
-
-
 /*
 
 1. 오른쪽 매개변수의 디폴트 값을 비우는 형태로는 디폴트 값을 지정할 수 없다.
@@ -88,7 +77,7 @@ ex) int Adder(int num1=10, int num2, int num3);    X
     
 ex) int Adder(int num1, int num2, int num3=10); 	  O
     int Adder(int num1, int num2=10, int num3=10); 	  O    
-    int Adder(int num1=10, int num2=10, int num3=10); O    
+    int Adder(int num1=10, int num2=10, int num3=10);	O    
 
 함수에 전달되는 인자가 왼쪽에서부터 오른쪽으로 채워지기 때문에..
  
@@ -105,7 +94,7 @@ int main(void)
 	std::cout<<"[3,3,3] : "<<BoxVolume(3, 3, 3)<<std::endl;
 	std::cout<<"[5,5,D] : "<<BoxVolume(3, 5)<<std::endl;
 	std::cout<<"[7,D,D] : "<<BoxVolume(7)<<std::endl;
-//	std::cout<<"[D,D,D] : "<<BoxVolume()<<std::endl;	// 모든 매개변수에 디폴트 값이 지정된 것이 아니기 때문에, 인자를 전달하지 않는 형태의 함수 호출은 컴파일 에러. 
+//	std::cout<<"[D,D,D] : "<<BoxVolume()<<std::endl;   // 모든 매개변수에 디폴트 값이 지정된 것이 아니기 때문에, 인자를 전달하지 않는 형태의 함수 호출은 컴파일 에러. 
 	
 	return 0;
 	
@@ -118,13 +107,6 @@ int BoxVolume(int length, int width, int height)
 
 
 #endif /* START3 */
-
-
-
-
-
-
-
 
 
 
