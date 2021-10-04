@@ -36,12 +36,13 @@ int main(void)
 
 
 
+
+
+#ifdef START2
 /*
 1. '디폴트 값은' 함수의 원형 선언에만 위치한다. 
 */
 
-
-#ifdef START2
 
 //DefaultValue1.cpp
 int Adder(int num=1, int num2=2);	// 함수의 원형 선언에만 매개변수의 디폴트 값이 위치한다. 
@@ -68,6 +69,10 @@ int Adder(int num1, int num2)
 
 
 
+
+
+
+#ifdef START3
 /*
 
 1. 오른쪽 매개변수의 디폴트 값을 비우는 형태로는 디폴트 값을 지정할 수 없다.
@@ -83,8 +88,6 @@ ex) int Adder(int num1, int num2, int num3=10); 	  O
  
 */
 
-
-#ifdef START3
 
 //DefaultValue3.cpp
 int BoxVolume(int length, int width=1, int height=1);
