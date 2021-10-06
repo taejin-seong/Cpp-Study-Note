@@ -23,7 +23,7 @@ using namespace std;
    void Func(const int &ref) {...} --> 함수 내에서 참조자 ref를 이용한 값의 변경을 허용하지 않음. ( 값 참조 O / 값 변경 X ) 
 */
 
-
+//RefSwap.cpp
 void SwapByRef2(int &ref1, int &ref2) // 참조자는 선언과 동시에 변수로 초기화 되어야한다.  
                                       // 실제로 ref1, ref2가 선언되는 시점은 SwapByRef2 함수가 호출되는 시점. 이 함수가 호출될 때 인자로 전달되는 값으로 초기화가 이루어짐. 
                                       // 참조자의 기준에 위배되지 않음. 
@@ -65,6 +65,7 @@ int main(void)
 */
 
 
+//RefReturnOne.cpp
 int& RefRetFuncOne(int &ref) // int& <--- 반환형이 참조자.                    
 {
 	ref ++;
@@ -112,6 +113,7 @@ int &num2 = ref; ~ 함수 반환 후 참조자 ref 이름은 메모리 공간에서 소멸...
 */
 
 
+//RefReturnTwo.cpp
 int& RefRetFuncOne(int &ref) // int& <- 반환형이 참조자. 
 {
 	ref ++;
@@ -160,6 +162,7 @@ int num2 = ref; ~ 함수 반환 후 참조자 ref 이름은 메모리 공간에서 소멸...
 */
 
 
+//RefReturnThree.cpp
 int RefRetFuncOne(int &ref) // int <--- 반환형이 기본자료형 int 이므로 ref에 저장된 값이 반환됨.  
 {
 	ref ++;
@@ -321,30 +324,4 @@ int main(void)
 }
 
 #endif /* START7 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
