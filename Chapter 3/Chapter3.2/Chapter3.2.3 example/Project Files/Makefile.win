@@ -4,12 +4,12 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = ../Car.o ../RacingMain.o
-LINKOBJ  = ../Car.o ../RacingMain.o
+OBJ      = ../CarInLine.o ../RacingInLineMain.o
+LINKOBJ  = ../CarInLine.o ../RacingInLineMain.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = "Chapter3.2.second example.exe"
+BIN      = "Chapter3.2.3 example.exe"
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
 RM       = rm.exe -f
@@ -24,8 +24,8 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-../Car.o: ../Car.cpp
-	$(CPP) -c ../Car.cpp -o ../Car.o $(CXXFLAGS)
+../CarInLine.o: ../CarInLine.cpp
+	$(CPP) -c ../CarInLine.cpp -o ../CarInLine.o $(CXXFLAGS)
 
-../RacingMain.o: ../RacingMain.cpp
-	$(CPP) -c ../RacingMain.cpp -o ../RacingMain.o $(CXXFLAGS)
+../RacingInLineMain.o: ../RacingInLineMain.cpp
+	$(CPP) -c ../RacingInLineMain.cpp -o ../RacingInLineMain.o $(CXXFLAGS)
