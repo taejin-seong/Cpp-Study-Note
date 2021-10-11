@@ -100,7 +100,7 @@ int main(void)
 #ifdef START2
 /*
 1.C++에서는 구조체 안에 함수를 삽입하는 것을 허용
-2.함수가 구조체 내에 삽입되면서 구조체 내에 선언된 변수에 직접저븐이 가능해짐. 
+2.함수가 구조체 내에 삽입되면서 구조체 내에 선언된 변수에 직접접근이 가능해짐. 
 */
 
 
@@ -114,7 +114,7 @@ int main(void)
 struct Car
 {
 	char gamerID[ID_LEN];  // 소유자 ID
-	int fuelGauge;  	   // 연료량
+	int fuelGauge;         // 연료량
 	int curSpeed;          // 현재속도 
 	
 	void ShowCarState()
@@ -208,7 +208,7 @@ namespace CAR_CONST  // 이름공간을 통해 상수가 사용되는 영역을 명시
 
 struct Car
 {
-	char gamerID[CAR_CONST::ID_LEN];  // 소유자 ID  //  이름공간 CAR_CONST에 선언딘 ID_LEN 
+	char gamerID[CAR_CONST::ID_LEN];  // 소유자 ID  //  이름공간 CAR_CONST에 선언된 ID_LEN 
 	int fuelGauge;                    // 연료량 
 	int curSpeed;                     // 현재속도 
 	
@@ -304,10 +304,10 @@ namespace CAR_CONST
 struct Car
 {
 	char gamerID[CAR_CONST::ID_LEN];  // 소유자 ID
-	int fuelGauge;  	              // 연료량
+	int fuelGauge;                    // 연료량
 	int curSpeed;                     // 현재속도 
 	
-	void ShowCarState();			  // 상태정보 출력    /*  
+	void ShowCarState();              // 상태정보 출력    /*  
 	void Accel();					  // 엑셀, 속도증가        함수의 원형 선언 
 	void Break();					  // 브레이크, 속도감                          */
 
@@ -321,8 +321,8 @@ void Car::ShowCarState()
 	cout<<"현재속도: "<<curSpeed<<"km/s"<<endl<<endl;
 } 
 	
-// Car라는 구조체 안에 정의된 함수 Accel...	
-void Car::Accel()  // 함수의 정의를 구조체 밖으로 뺴냄. ( 구조체 안에 선언된 함수의 정의 ) 
+// Car라는 구조체 안에 정의된 함수 Accel...
+void Car::Accel()  // 함수의 정의를 구조체 밖으로 빼냄  ( 구조체 안에 선언된 함수의 정의 ) 
 {
 	if(fuelGauge <= 0)
 	{
