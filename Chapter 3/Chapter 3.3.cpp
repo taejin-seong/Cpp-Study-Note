@@ -7,6 +7,7 @@ using namespace std;
 
 #ifdef START1
 /*
+1. 
 */
 
 
