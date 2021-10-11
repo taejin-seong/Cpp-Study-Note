@@ -9,6 +9,11 @@ using namespace std;
 
 #ifdef START1
 /*
+1.구조체는 연관 있는 데이터를 묶을 수 있는 법적 장치...
+2.C++에서는 별도의 typedef 선언 없이도 다음과 같이 변수를 선언할 수 있다.
+
+ex)
+	Car basicCar; 
 */
 
 
@@ -67,7 +72,7 @@ void Break(Car &car)
 
 int main(void)
 {
-	Car run99 = {"run99", 100, 0};
+	Car run99 = {"run99", 100, 0}; // C++에서는 별도의 typedef 선언 없이도 다음과 같이 변수를 선언할 수 있다.
 	Accel(run99);
 	Accel(run99);
 	ShowCarState(run99);
@@ -94,6 +99,8 @@ int main(void)
 
 #ifdef START2
 /*
+1.C++에서는 구조체 안에 함수를 삽입하는 것을 허용
+2.함수가 구조체 내에 삽입되면서 구조체 내에 선언된 변수에 직접저븐이 가능해짐. 
 */
 
 
@@ -120,7 +127,7 @@ struct Car
 	
 	void Accel()
 	{
-		if(fuelGauge <= 0)
+		if(fuelGauge <= 0) // 구조체안에 함수가 삽입되었기에 멤버 연산자 없이 구조체 멤버에 직접접근이 가능 
 		{
 			return;
 		}
@@ -156,7 +163,7 @@ struct Car
 int main(void)
 {
 	Car run99 = {"run99", 100, 0};
-	run99.Accel();
+	run99.Accel();  // 구조체 안에 함수가 들어갔으므로 멤버 연산자로 접근 
 	run99.Accel();
 	run99.ShowCarState();
 	run99.Break();
@@ -180,11 +187,13 @@ int main(void)
 
 #ifdef START3
 /*
+1. 열거형 enum을 이용해서 구조체 내에서만 유효한 상수를 정의할 수 있음.
+2. 이름공간을 이용해서 상수가 사용되는 영역을 명시하는 것도 또 다른 방법이 될 수가 있음. ~ 가독성이 좋아짐 
 */
 
 
 //RacingCarEnum.cpp
-namespace CAR_CONST
+namespace CAR_CONST  // 이름공간을 통해 상수가 사용되는 영역을 명시 
 {
 	enum
 	{
@@ -199,8 +208,8 @@ namespace CAR_CONST
 
 struct Car
 {
-	char gamerID[CAR_CONST::ID_LEN];  // 소유자 ID
-	int fuelGauge;  	              // 연료량
+	char gamerID[CAR_CONST::ID_LEN];  // 소유자 ID  //  이름공간 CAR_CONST에 선언딘 ID_LEN 
+	int fuelGauge;                    // 연료량 
 	int curSpeed;                     // 현재속도 
 	
 	void ShowCarState()
@@ -273,6 +282,8 @@ int main(void)
 
 #ifdef START4
 /*
+1.구조체 밖으로 함수를 빼낼 수 있다. 
+2. 함수의 원형선언을 구조체 안에 두고, 함수의 정의를 구조체 밖으로 빼내면 됨. 
 */
 
 
@@ -296,9 +307,9 @@ struct Car
 	int fuelGauge;  	              // 연료량
 	int curSpeed;                     // 현재속도 
 	
-	void ShowCarState();			  // 상태정보 출력 
-	void Accel();					  // 엑셀, 속도증가 
-	void Break();					  // 브레이크, 속도감 
+	void ShowCarState();			  // 상태정보 출력    /*  
+	void Accel();					  // 엑셀, 속도증가        함수의 원형 선언 
+	void Break();					  // 브레이크, 속도감                          */
 
 };
 
@@ -310,8 +321,8 @@ void Car::ShowCarState()
 	cout<<"현재속도: "<<curSpeed<<"km/s"<<endl<<endl;
 } 
 	
-	
-void Car::Accel()
+// Car라는 구조체 안에 정의된 함수 Accel...	
+void Car::Accel()  // 함수의 정의를 구조체 밖으로 뺴냄. ( 구조체 안에 선언된 함수의 정의 ) 
 {
 	if(fuelGauge <= 0)
 	{
@@ -367,8 +378,22 @@ int main(void)
 #endif /* START4 */
 
 
+/*
+1. 구조체 안에 함수가 정의되어있으면 함수를 인라인으로 처리한다.
+2. 함수를 구조체 밖으로 뺴내면 인라인의 의미가 사라짐. 따라서 의미를 그대로 유지하려면 inline을 이용해서 인라인 처리를 명시적으로 지시해야한다. 
+
+ex)
+	inline void Car::ShowCarState()
+	{
+    	......
+	}
+
+*/
 
 
+/*
+ ****** 위에서 정의한 구조체를 가리켜 그냥 '클래스'라고 표현해도 틀리지 않는다. ****** 
+*/
 
 
 #ifdef START5
