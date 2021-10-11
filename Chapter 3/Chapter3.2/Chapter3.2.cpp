@@ -10,6 +10,28 @@ using namespace std;
 
 #ifdef START1
 /*
+1. struct를 대신해서 class를 사용하면, 구조체가 아닌 클래스가 된다.
+
+2. 클래스를 정의하는 과정에서 각각의 변수 및 함수의 접근 허용범위를 별도로 선언해야한다.
+
+------------------------접근 지시자------------------------ 
+
+* public    : 어디서든 접근 허용 
+* protcted  : 상속관계에 놓여있을 때, 유도 클래스에서의 접근 허용
+* private   : 클래스 내 (클래스 내에 정의된 함수) 에서만 접근 허용   
+
+------------------------------------------------------------
+
+3. struct를 선언했을 때 모든 멤버는 public으로 디폴트 인식 
+4. class를 선언했을 때 모든 멤버는 private으로 디폴트 인식          ~ 클래스 내 public 함수에서 private 변수 초기화 진행.
+
+* 구조체도 클래스도 접근제어 지시자의 선언이 가능하고, 그 의미도 동일하다. 다만 접근제어의 디폴트 인식만 다를 뿐 
+
+5. * 객체(object) = 변수+기능
+   * 클래스를 구성하는 변수 (클래스 내에 선언된 변수) = 멤버 변수
+   * 클래스를 구성하는 함수 (클래스 내에 정의된 함수) = 멤버 함수
+   
+6. 멤버 변수는 private으로... 멤버 함수는 public으로...   
 */
 
 
@@ -27,23 +49,24 @@ namespace CAR_CONST
 }
 
 
-class Car
+class Car  // 클래스 정의 
 {
 	
-private:
-	char gamerID[CAR_CONST::ID_LEN];
-	int fuelGauge;
-	int curSpeed;
-	
-public:
-	void InitMembers(const char * ID, int fuel);
+private:  // 지금부터 private  
+	char gamerID[CAR_CONST::ID_LEN];  /* 외부에서 접근 불가 */  
+	int fuelGauge;					  	
+	int curSpeed;                      // -> 멤버 변수 
+	 
+public:  // 지금부터 public                      
+	void InitMembers(const char * ID, int fuel);  /* 어디서든 접근 허용 */ 
 	void ShowCarState();
 	void Accel();
-	void Break();
+	void Break();                      // -> 멤버 함수
+	 
 };
 
 
-void Car::InitMembers(const char * ID, int fuel)
+void Car::InitMembers(const char * ID, int fuel)  // 클래스 안에 선언된 변수의 초기화를 목적으로 정의된 함수. 
 {
 	strcpy(gamerID, ID);
 	fuelGauge = fuel;
@@ -94,8 +117,8 @@ void Car::Break()
 
 int main(void)
 {
-	Car run99;
-	
+	Car run99; // 객체 선언. 변수 + 기능 
+	 
 	run99.InitMembers("run99", 100);
 	run99.Accel();
 	run99.Accel();
