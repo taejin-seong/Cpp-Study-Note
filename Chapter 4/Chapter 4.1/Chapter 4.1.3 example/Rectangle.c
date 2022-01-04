@@ -27,5 +27,3 @@ void Rectangle::ShowRecInfo() const
 	cout<<lowRight.GetY()<<']'<<endl<<endl;
 	 
 }
-
-

@@ -17,5 +17,3 @@ class Point
 			
 };
 #endif
-
-

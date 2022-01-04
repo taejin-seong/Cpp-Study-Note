@@ -55,5 +55,3 @@ bool Point::SetY(int ypos)
 	y = ypos;
 	return true;
 }
-
-
