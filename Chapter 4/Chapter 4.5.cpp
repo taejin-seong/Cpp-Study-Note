@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring> 
 
-//OOP 단계별 프로젝트 2단계 
+//OOP 단계별 프로젝트 2단계
 
 // 은행계좌 관리 프로그램 ver 0.2
 
