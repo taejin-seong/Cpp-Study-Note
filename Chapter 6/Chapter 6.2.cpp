@@ -147,4 +147,3 @@ void ShowPointPos(const Point& pos)
 	cout<<"y: "<<pos.y<<endl;
 }
 #endif /* START2 */
-
