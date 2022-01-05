@@ -94,5 +94,3 @@ int main(void)
 	YourFunc(obj2);
 }
 #endif /* START2 */
-
-
