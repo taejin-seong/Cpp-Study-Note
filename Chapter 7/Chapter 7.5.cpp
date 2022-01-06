@@ -182,26 +182,27 @@ class AccountHandler
 			}
 		}
 			
-			
-            void ShowAllAccountInfo(void) const
-		   {
+		
+	
+		void ShowAllAccountInfo(void) const
+	        {
 						
-                for(int i = 0; i < AccNum; i++)
-                {
-                    AccountArr[i]->ShowAllAccountInfo();
-                    cout<<endl;	
-                }
-            }
+               		 for(int i = 0; i < AccNum; i++)
+                	{
+                    		AccountArr[i]->ShowAllAccountInfo();
+                    		cout<<endl;	
+                	}
+           	 }
 			
 			
 			
-			~AccountHandler()
+		~AccountHandler()
+		{
+			for (int i =0; i < AccNum; i++)
 			{
-				for (int i =0; i < AccNum; i++)
-				{
-					delete AccountArr[i];
-				}
+				delete AccountArr[i];
 			}
+		}
 
 };
  
@@ -247,7 +248,3 @@ int main(void)
 	
 	return 0;
 } 
-
-
-
-
