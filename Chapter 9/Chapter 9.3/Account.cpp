@@ -68,9 +68,9 @@ int Account::WithDraw(int money)
 
 void Account::ShowAllAccountInfo(void) const  
 {
-	cout<<"°èÁÂID: "<<AccID<<endl;
-	cout<<"ÀÌ ¸§: "<<ClientName<<endl;
-	cout<<"ÀÜ ¾×: "<<Balance<<endl;
+	cout<<"ê³„ì¢ŒID: "<<AccID<<endl;
+	cout<<"ì´ ë¦„: "<<ClientName<<endl;
+	cout<<"ìž” ì•¡: "<<Balance<<endl;
 	cout<<endl;
 }
 
