@@ -12,7 +12,7 @@
 
 #include "Account.h"
 
-
+ 
 //보통예금계좌 
 class NormalAccount : public Account  
 {

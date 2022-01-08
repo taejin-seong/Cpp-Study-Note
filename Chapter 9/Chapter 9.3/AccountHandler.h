@@ -27,7 +27,7 @@ class AccountHandler
 		
 		void ShowMenu(void) const;           //메뉴출력	
 		void MakeAccount(void);              //계좌개설 항목선택				
-		void MakeNormalAccount(void);        //보통예금계좌	개설 
+		void MakeNormalAccount(void);        //보통예금계좌 개설 
 		void MakeCreditAccount(void);        //신용신뢰계좌 개설 
 		void DepositMoney(void);             //입금 
 		void WithDrawMoney(void);            //출금 
