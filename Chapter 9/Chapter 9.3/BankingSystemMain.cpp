@@ -18,7 +18,7 @@ int main(void)
 	while(1)
 	{
 		manger.ShowMenu();
-		cout<<"¼±ÅÃ: ";
+		cout<<"ì„ íƒ: ";
 		cin>>choice;
 		cout<<endl;
 		
@@ -44,7 +44,7 @@ int main(void)
 				return 0;
 			
 			default:
-				cout<<"¾ø´Â Ç×¸ñÀÔ´Ï´Ù."<<endl<<endl;	
+				cout<<"Â¾Ã¸Â´Ã‚ Ã‡Ã—Â¸Ã±Ã€Ã”Â´ÃÂ´Ã™."<<endl<<endl;	
 		}	
 	}
 	
