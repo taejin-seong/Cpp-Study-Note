@@ -49,11 +49,13 @@ int main(void)
 	return 0;
  }
  #endif /* START1 */ 
- 
- 
- 
- 
- #ifdef START2
+
+
+
+
+
+
+#ifdef START2
  
  //OverloadingOperation.cpp
  class Point
@@ -92,6 +94,9 @@ int main(void)
 	return 0;
  }
  #endif /* START2 */
+ 
+ 
+ 
  
  
  
@@ -139,11 +144,12 @@ int main(void)
 	return 0;
 }
 #endif /* START3 */ 
- 
- 
 
 
- 
+
+
+
+
 #ifdef START4
 
 //p409 Question 10-1 NO.1
