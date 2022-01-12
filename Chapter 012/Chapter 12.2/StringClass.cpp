@@ -23,7 +23,7 @@ String::String(const char* s)
 String::String(const String& s)
 {
 	len = s.len;
-	str = s.str;
+	str = new char[len];
 	strcpy(str, s.str);
 } 
 
