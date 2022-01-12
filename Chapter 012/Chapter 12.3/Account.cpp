@@ -57,7 +57,7 @@ int Account::WithDraw(int money)
 void Account::ShowAllAccountInfo(void) const  
 {
 	cout<<"계좌ID: "<<AccID<<endl;
-	cout<<"이 름:  "<<ClientName<<endl;
+	cout<<"이 름: "<<ClientName<<endl;
 	cout<<"잔 액: "<<Balance<<endl;
 	cout<<endl;
 }
