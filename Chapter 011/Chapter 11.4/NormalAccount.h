@@ -13,7 +13,7 @@
 #include "Account.h"
 
  
-//º¸Åë¿¹±Ý°èÁÂ 
+//ë³´í†µì˜ˆê¸ˆê³„ì¢Œ
 class NormalAccount : public Account  
 {
 	private:
