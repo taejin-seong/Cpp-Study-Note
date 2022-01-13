@@ -83,4 +83,4 @@ BoundCheckArray<T>::~BoundCheckArray()
 	delete []arr;
 }
 
-#endif /* BOUND_CHECK_ARRAY_H*/
+#endif /* BOUND_CHECK_ARRAY_H */
