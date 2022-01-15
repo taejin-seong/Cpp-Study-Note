@@ -17,6 +17,8 @@
 
 using namespace std;
 
+
+const int NAME_LEN = 20;
  
 //사용자 메뉴 
 enum{
