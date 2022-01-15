@@ -12,8 +12,7 @@
 
 #include "NormalAccount.h"
 
-
-//½Å¿ë½Å·Ú°èÁÂ 
+ 
 class HighCreditAccount : public NormalAccount  
 {
 	private:
