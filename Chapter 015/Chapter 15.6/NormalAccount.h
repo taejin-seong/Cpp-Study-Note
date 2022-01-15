@@ -13,7 +13,6 @@
 #include "Account.h"
 
  
-//보통예금게좌 
 class NormalAccount : public Account  
 {
 	private:

@@ -20,17 +20,17 @@ class String
 		char* str;
 		
 	public:
-		String();                                                    //¹®ÀÚ¿­À» ÀÎÀÚ·Î Àü´Ş¹Ş´Â »ı¼ºÀÚ Á¤ÀÇ 
-		String(const char* s);                                       //¹®ÀÚ¿­ ÀúÀåÀ» À§ÇÑ ¸Ş¸ğ¸® °ø°£ µ¿Àû ÇÒ´çÀ» À§ÇÑ »ı¼ºÀÚ Á¤ÀÇ 
-		String(const String& s);                                     //±íÀº º¹»ç¸¦ ÇÏ´Â º¹»ç »ı¼ºÀÚ  
-		~String();                                                   //¼Ò¸êÀÚ 
-		String  operator+ (const String& s);                         //°áÇÕµÈ ¹®ÀÚ¿­·Î ÃÊ±âÈ­µÈ °´Ã¼¸¦ ¹İÈ¯ÇÏ´Â + ¿¬»êÀÚ ¿À¹ö·Îµù 
-		String& operator= (const String& s);                         //´ëÀÔ ¿¬»êÀÚ Á¤ÀÇ 
-		String& operator+= (const String& s);                        //¹®ÀÚ¿­À» µ¡ºÙÀÌ´Â += ¿¬»êÀÚ ¿À¹ö·Îµù 
-		bool operator== (const String& s);                           //³»¿ëºñ±³¸¦ ÁøÇàÇÏ´Â ==¿¬»êÀÚ ¿À¹ö·Îµù 
+		String();                                                    //ë¬¸ìì—´ì„ ì¸ìë¡œ ì „ë‹¬ë°›ëŠ” ìƒì„±ì ì •ì˜ 
+		String(const char* s);                                       //ë¬¸ìì—´ ì €ì¥ì„ ìœ„í•œ ë©”ëª¨ë¦¬ ê³µê°„ ë™ì  í• ë‹¹ì„ ìœ„í•œ ìƒì„±ì ì •ì˜ 
+		String(const String& s);                                     //ê¹Šì€ ë³µì‚¬ë¥¼ í•˜ëŠ” ë³µì‚¬ ìƒì„±ì  
+		~String();                                                   //ì†Œë©¸ì 
+		String  operator+ (const String& s);                         //ê²°í•©ëœ ë¬¸ìì—´ë¡œ ì´ˆê¸°í™”ëœ ê°ì²´ë¥¼ ë°˜í™˜í•˜ëŠ” + ì—°ì‚°ì ì˜¤ë²„ë¡œë”© 
+		String& operator= (const String& s);                         //ëŒ€ì… ì—°ì‚°ì ì •ì˜ 
+		String& operator+= (const String& s);                        //ë¬¸ìì—´ì„ ë§ë¶™ì´ëŠ” += ì—°ì‚°ì ì˜¤ë²„ë¡œë”© 
+		bool operator== (const String& s);                           //ë‚´ìš©ë¹„êµë¥¼ ì§„í–‰í•˜ëŠ” ==ì—°ì‚°ì ì˜¤ë²„ë¡œë”© 
 		
-		friend ostream& operator<<(ostream& os, const String& s);    //ÄÜ¼ÖÃâ·ÂÀÌ °¡´ÉÇÏµµ·Ï << ¿¬»êÀÚ ¿À¹ö·Îµù 
-		friend istream& operator>>(istream& is, String& s);		     //ÄÜ¼ÖÀÔ·ÂÀÌ °¡´ÉÇÏµµ·Ï >> ¿¬»êÀÚ ¿À¹ö·Î´ç 		
+		friend ostream& operator<<(ostream& os, const String& s);    //ì½˜ì†”ì¶œë ¥ì´ ê°€ëŠ¥í•˜ë„ë¡ << ì—°ì‚°ì ì˜¤ë²„ë¡œë”© 
+		friend istream& operator>>(istream& is, String& s);          //ì½˜ì†”ì…ë ¥ì´ ê°€ëŠ¥í•˜ë„ë¡ >> ì—°ì‚°ì ì˜¤ë²„ë¡œë‹¹ 		
 };
 
 #endif /* STRING_H */
