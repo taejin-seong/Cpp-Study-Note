@@ -4,6 +4,8 @@ http://www.yes24.com/Product/Goods/3816661 <br>
 
 ## Dev environment <br>
 Dev C++ 5.11 <br>
-https://sourceforge.net/projects/orwelldevcpp/<br> <br>
+https://sourceforge.net/projects/orwelldevcpp/<br>
 
-### ※ The project was completed on January 17, 2022
+## Note <br>
+#### The project was completed on January 17, 2022 <br>
+
