@@ -7,5 +7,5 @@ Dev C++ 5.11 <br>
 https://sourceforge.net/projects/orwelldevcpp/<br>
 
 ## Note <br>
-#### The project was completed on January 17, 2022 <br>
+#### The project was completed on January 17, 2022 <br> 
 
